@@ -10,11 +10,8 @@ class Pathname
   alias_method :to_str, :to_s unless method_defined?(:to_str)
 end
 
-OS = RUBY_PLATFORM =~ /darwin/ ? :osx : :linux
-HOSTNAME = `hostname`.chomp
 ROOT = Pathname.new(__FILE__).parent.expand_path
 DOTFILES_HOME = ROOT/"home"
-DOTFILES_HOME_CSR = ROOT/"home_csr"
 HOME = Pathname.new(Dir.home)
 
 def system(*args)
@@ -41,43 +38,25 @@ def clean(dir)
   end
 end
 
-def csr?
-  HOSTNAME =~ /.*\.comp\.hkbu\.edu\.hk/ || HOSTNAME =~ /^csr\d+/
-end
-
-def mac?
-  `uname`.chomp == "Darwin"
-end
-
 # Link files
 link_files(DOTFILES_HOME, HOME)
 link_files(DOTFILES_HOME/".config", HOME/".config", skip_directory: false)
 link_files(DOTFILES_HOME/".local/bin", HOME/".local/bin")
 
-if csr?
-  link_files(DOTFILES_HOME_CSR, HOME)
-  link_files(DOTFILES_HOME_CSR/".ssh", HOME/".ssh")
-else
-  link_files(DOTFILES_HOME/".ssh", HOME/".ssh")
-end
+link_files(DOTFILES_HOME/".ssh", HOME/".ssh")
 
-if mac?
-  link_files(DOTFILES_HOME/".gnupg", HOME/".gnupg")
-else
-  mkdir_p HOME/".gnupg"
-  ln_sf DOTFILES_HOME/".gnupg/gpg.conf", HOME/".gnupg"
-end
+# link_files(DOTFILES_HOME/".gnupg", HOME/".gnupg")
 
 # Cleanup broken symlinks
 clean(HOME)
 clean(HOME/".config")
 clean(HOME/".ssh")
-clean(HOME/".gnupg")
+# clean(HOME/".gnupg")
 
 # Post linking
 chmod 0700, HOME/".ssh"
-chmod 0700, HOME/".gnupg"
+# chmod 0700, HOME/".gnupg"
 
-ENV["LESSKEY"] = "#{ENV["HOME"]}/.local/share/less/lesskey"
-system "lesskey", HOME/".config/less/lesskey"
+# ENV["LESSKEY"] = "#{ENV["HOME"]}/.local/share/less/lesskey"
+# system "lesskey", HOME/".config/less/lesskey"
 

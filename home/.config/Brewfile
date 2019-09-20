@@ -4,162 +4,50 @@ tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/command-not-found"
 tap "homebrew/core"
-cask "java"
 brew "aria2"
 brew "autojump"
 brew "bat"
-brew "boost"
 brew "fontconfig"
-brew "sqlite"
 brew "python"
 brew "cheat"
-brew "ckan"
-brew "clang-format"
-brew "cmake"
-brew "cocoapods"
-brew "coreutils"
-brew "cpanminus"
-brew "cquery", args: ["HEAD"]
-brew "cryptopp"
-brew "ctags"
-brew "direnv"
 brew "exa"
-brew "exiftool"
-brew "fd"
-brew "ffmpeg"
-brew "fpp"
-brew "fzf"
-brew "gmp"
 brew "gcc"
-brew "ghostscript"
 brew "gistit"
 brew "git"
-brew "gnu-sed"
-brew "gnupg"
 brew "gnuplot"
-brew "graphviz"
-brew "highlight"
 brew "htop", args: ["with-ncurses"]
-brew "hub"
-brew "icdiff"
-brew "imagemagick"
-brew "jq"
-brew "languagetool"
-brew "less"
 brew "mas"
-brew "python@2"
-brew "mercurial"
-brew "mitmproxy"
-brew "mupdf-tools"
-brew "neovim", args: ["HEAD"]
-brew "node"
-brew "pandoc"
-brew "pbc"
-brew "pinentry-mac"
 brew "pipenv"
 brew "pyenv"
 brew "pyenv-which-ext"
-brew "qt"
-brew "pyqt"
-brew "rbenv"
-brew "reattach-to-user-namespace"
-brew "ripgrep"
 brew "ruby"
 brew "safe-rm"
-brew "shellcheck"
-brew "socat"
 brew "ssh-copy-id"
-brew "swig"
-brew "tcping"
-brew "tmux"
-brew "tor"
-brew "tree"
-brew "unrar"
-brew "xsv"
-brew "yarn"
-brew "you-get"
 brew "youtube-dl"
 brew "zsh-syntax-highlighting"
-cask "1password"
-cask "alfred"
-cask "bartender"
-cask "betterzipql"
-cask "cheatsheet"
-cask "coconutbattery"
-cask "dash"
-cask "docker"
-cask "dropbox"
-cask "font-hack-nerd-font"
-cask "font-noto-sans-cjk"
-cask "font-noto-serif-cjk"
-cask "forklift"
+brew "p7zip"
 cask "grammarly"
-cask "iina"
-cask "intel-power-gadget"
-cask "istat-menus"
 cask "iterm2"
-cask "jump-desktop"
-cask "keybase"
-cask "logitech-options"
 cask "mactex"
-cask "max"
-cask "mcedit"
-cask "minecraft"
-cask "numi"
-cask "osxfuse"
-cask "papers"
-cask "pdfexpert"
-cask "plex-media-server"
-cask "presentation"
-cask "qlcolorcode"
-cask "qlimagesize"
-cask "qlmarkdown"
-cask "qlprettypatch"
-cask "qlrest"
-cask "qlstephen"
-cask "qlvideo"
-cask "quicklook-csv"
-cask "quicklook-json"
-cask "secure-pipes"
-cask "skim"
 cask "skype"
-cask "steam"
-cask "terminology"
-cask "typora"
-cask "vagrant"
-cask "virtualbox"
+cask "motrix"
+cask "mounty"
+cask "drawio"
+cask "google-chrome"
+cask "pdf-expert"
+cask "vnc-viewer"
+cask "betterzip"
+cask "mathpix-snipping-tool"
+cask "jabref"
+cask "syncthing"
+
 cask "visual-studio-code"
-cask "vmware-fusion"
-cask "webpquicklook"
-mas "Amphetamine", id: 937984704
 mas "Archiver", id: 619437121
-mas "Clear Day", id: 411543336
-mas "Dropshelf", id: 540404405
-mas "F5Access", id: 1243219105
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-mas "LimeChat", id: 414030210
-mas "Mate Translate", id: 1005088137
-mas "MathStudio", id: 829912893
-mas "Moom", id: 419330170
-mas "Noizio", id: 928871589
-mas "Notability", id: 736189492
 mas "Numbers", id: 409203825
-mas "Orangered Notifier", id: 468366517
 mas "Pages", id: 409201541
-mas "PiPifier", id: 1160374471
-mas "PopClip", id: 445189367
 mas "QQ", id: 451108668
-mas "ReadKit", id: 588726889
-mas "Roadblock", id: 1051436753
-mas "Scan", id: 722364523
-mas "Sip", id: 507257563
-mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
-mas "Telegram", id: 747648890
-mas "TunesArt", id: 444696268
-mas "Wallpaper Wizard", id: 1266674560
 mas "WeChat", id: 836500024
-mas "WiFi Explorer", id: 494803304
 mas "Xcode", id: 497799835
